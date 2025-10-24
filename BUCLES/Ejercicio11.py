@@ -1,6 +1,6 @@
 palabra = input ("Di una palabra: ")
-a = 0
-i=len(palabra)
-while a < len(palabra):
-    print (palabra[::-a])
-    a = a+1
+i=len(palabra) - 1
+while i >= 0:
+    print (palabra[i])
+    i = i-1
+    

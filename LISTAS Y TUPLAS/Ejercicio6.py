@@ -7,5 +7,6 @@ while a < len(asignaturas):
     a=a+1
 
 for i in range(len(asignaturas)):
-    if int(notas[i]) < 5:
-        print ("En ", asignaturas[i], " has sacado un: ", notas[i], " tienes que repetir la asginatura")
+    if str(notas[i]) < 5:
+        asignaturas = [asignaturas[i]]
+print ("Tienes que repetir: ", asignaturas)    

@@ -6,7 +6,5 @@ while a < len(asignaturas):
     notas.append(nota)
     a=a+1
 
-for i in range(len(asignaturas)):
-    if str(notas[i]) < 5:
-        asignaturas = [asignaturas[i]]
+asignaturas = [asignaturas[i]for i in range(len(asignaturas)) if int(notas[i]) < 5]
 print ("Tienes que repetir: ", asignaturas)    

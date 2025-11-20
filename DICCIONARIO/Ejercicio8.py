@@ -1,9 +1,11 @@
-dicc = dict()
-cuantas = input("Cuantas palabras quieres tener en el diccionario: ")
-for i in range (1, cuantas):
-    palabras = input("Di las palabras con el formato de español:ingles: ")
-    separar = palabras.split(":")
-    español = separar[0]
-    ingles = separar[1]
-    dicc[español] = ingles
+diccionario = {}
+palabras = input("Di las palabras con el formato de español:ingles: ")
+for i in palabras.split(","):
+    español, ingles = i.split(":")
+    diccionario[español] = ingles
 frase = input("Di una frase que se traduzca con las palabras del diccionario: ")
+for i in frase.split():
+    if i in diccionario:
+        print(diccionario[i], end=" ")
+    else:
+        print(i, end=" ")
